@@ -24,3 +24,10 @@ Course: [udemy](https://www.udemy.com/course/elasticsearch-7-and-elastic-stack/)
   $ apt install wget
   $ wget https://media.sundog-soft.com/es7/shakes-mapping.json
   ```
+
+* start/use docker containers
+  ```bash
+  $ docker-compose up
+  $ winpty docker container exec -it my-code_ubuntu_1 bash
+  bash# curl -XGET elasticsearch:9200
+  ```

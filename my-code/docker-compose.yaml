@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile.ubuntu
     stdin_open: true
     tty: true
+    networks:
+      - elastic
   elasticsearch:
     image: elasticsearch:7.6.0
     environment: 
