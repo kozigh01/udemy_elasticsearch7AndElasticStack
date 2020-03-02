@@ -1,7 +1,9 @@
 version: '3'
 services: 
   ubuntu:
-    image: ubuntu
+    build: 
+      context: ./
+      dockerfile: Dockerfile.ubuntu
     stdin_open: true
     tty: true
   elasticsearch:
