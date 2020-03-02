@@ -1,0 +1,17 @@
+version: '3'
+services: 
+  ubuntu:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+  elasticsearch:
+    image: elasticsearch:7.6.0
+    environment: 
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks: 
+      - elastic
+networks: 
+  elastic:
