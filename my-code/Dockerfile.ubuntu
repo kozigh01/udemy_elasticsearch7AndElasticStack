@@ -10,4 +10,4 @@ RUN wget http://media.sundog-soft.com/es7/shakespeare_7.0.json
 COPY ./scripts ./scripts
 RUN chmod u+x ./scripts/load-shakespeare.sh
 
-CMD ./scripts/load-shakespeare.sh
+CMD ./scripts/load-shakespeare.sh && tail -f /dev/null
