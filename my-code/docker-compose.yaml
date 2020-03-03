@@ -1,9 +1,12 @@
 version: '3'
 services: 
   ubuntu:
+    depends_on: 
+      - elasticsearch
     build: 
       context: ./
       dockerfile: Dockerfile.ubuntu
+    # command: /bin/bash -c "load-shakespeare.sh"
     stdin_open: true
     tty: true
     networks:
