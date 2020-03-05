@@ -7,7 +7,7 @@ RUN apt install -y curl
 RUN wget --no-check-certificate https://media.sundog-soft.com/es7/shakes-mapping.json
 RUN wget http://media.sundog-soft.com/es7/shakespeare_7.0.json
 
-COPY ./scripts ./scripts
-RUN chmod u+x ./scripts/load-shakespeare.sh
+COPY ./scripts .
+RUN chmod a+x ./load-shakespeare.sh
 
-CMD ./scripts/load-shakespeare.sh && tail -f /dev/null
+CMD ./load-shakespeare.sh && tail -f /dev/null

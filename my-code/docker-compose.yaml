@@ -6,7 +6,9 @@ services:
     build: 
       context: ./
       dockerfile: Dockerfile.ubuntu
-    # command: /bin/bash -c "load-shakespeare.sh"
+    volumes:
+      - ./scripts:/app/scripts
+    command: /bin/bash -c "./scripts/01_load-shakespeare.sh"
     stdin_open: true
     tty: true
     networks:
