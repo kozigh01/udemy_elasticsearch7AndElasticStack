@@ -4,10 +4,11 @@ WORKDIR /app
 RUN apt update && apt upgrade 
 RUN apt install -y wget
 RUN apt install -y curl
+RUN apt install -y ssh
 RUN wget --no-check-certificate https://media.sundog-soft.com/es7/shakes-mapping.json
 RUN wget http://media.sundog-soft.com/es7/shakespeare_7.0.json
 
-COPY ./scripts .
-RUN chmod a+x ./load-shakespeare.sh
+COPY ./scripts ./scripts
+# RUN chmod a+x ./scripts/01_load-shakespeare.sh
 
-CMD ./load-shakespeare.sh && tail -f /dev/null
+CMD ./scripts/01_load-shakespeare.sh && tail -f /dev/null
