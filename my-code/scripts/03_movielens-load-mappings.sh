@@ -11,3 +11,5 @@ curl -H "Content-Type: application/json" -XPUT elasticsearch:9200/movies -d'
     }
   }
 }'
+
+curl -H 'Content-Type: application/json' -XGET elasticsearch:9200/movies/_mapping

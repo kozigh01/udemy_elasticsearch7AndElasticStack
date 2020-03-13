@@ -1,7 +1,7 @@
 FROM ubuntu
 WORKDIR /app
 
-RUN apt update && apt upgrade 
+RUN apt -y update && apt -y upgrade 
 RUN apt install -y wget
 RUN apt install -y curl
 RUN apt install -y ssh
