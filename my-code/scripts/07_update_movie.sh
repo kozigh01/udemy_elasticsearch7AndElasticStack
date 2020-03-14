@@ -1,3 +1,5 @@
+#!/bin/bash
+
 curl -H 'Content-Type: application/json' -XPOST elasticsearch:9200/movies/_doc/109487/_update -d'
 {
   "doc": {
