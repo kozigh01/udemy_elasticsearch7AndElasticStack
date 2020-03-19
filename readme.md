@@ -13,6 +13,7 @@ Datasets: [movielens](https://movielens.org/) | [grouplens](https://grouplens.or
   $ docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.6.0
   ```
 * Replace curl with custom version: [course instructions: Import a Single Movie via JSON / REST (2:33 mark)](https://www.udemy.com/course/elasticsearch-7-and-elastic-stack/learn/lecture/14728786#overview)
+* Elasticsearch: [URI Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html)
 
 ## Commands
 * check if elastic search is running:
